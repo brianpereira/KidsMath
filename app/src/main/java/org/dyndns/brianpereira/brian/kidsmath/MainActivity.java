@@ -43,8 +43,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Code for the Credits button
+        Button btnCredits = (Button) findViewById(R.id.bnCredits);
+        // Add a listener
+        btnLevel1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        // Code for the exit button
+            }
+        });
+
+        // Code for the Exit button
         Button btnExit = (Button) findViewById(R.id.btnExit);
         // Add a listener
         btnLevel1.setOnClickListener(new View.OnClickListener() {

@@ -2,6 +2,8 @@ package org.dyndns.brianpereira.brian.kidsmath;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 /**
@@ -10,11 +12,19 @@ import android.widget.TextView;
 
 public class Credits extends AppCompatActivity {
 
+    private TextView textViewCredits;
+    private Animation animation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credits);
-        TextView txtViewCredits = (TextView) findViewById(R.id.textViewCredits);
+
+        animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.credits);
+        textViewCredits = (TextView) findViewById(R.id.textViewCredits);
+        textViewCredits.setText(getString(R.string.txtCreditsMessage)); // Gets the string from strings.xml
+
+
 
     }
 }
