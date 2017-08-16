@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         btnLevel1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Credits.class));
+               // startActivity(new Intent(getApplicationContext(), Credits.class));
             }
         });
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         // Code for the Level 3 button
         Button btnLevel3 = (Button) findViewById(R.id.btnLevel3);
         // Add a listener
-        btnLevel1.setOnClickListener(new View.OnClickListener() {
+        btnLevel3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -46,17 +46,17 @@ public class MainActivity extends AppCompatActivity {
         // Code for the Credits button
         Button btnCredits = (Button) findViewById(R.id.bnCredits);
         // Add a listener
-        btnLevel1.setOnClickListener(new View.OnClickListener() {
+        btnCredits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getApplicationContext(), Credits.class));
             }
         });
 
         // Code for the Exit button
         Button btnExit = (Button) findViewById(R.id.btnExit);
         // Add a listener
-        btnLevel1.setOnClickListener(new View.OnClickListener() {
+        btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

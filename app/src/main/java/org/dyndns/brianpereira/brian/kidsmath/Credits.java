@@ -23,6 +23,7 @@ public class Credits extends AppCompatActivity {
         animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.credits);
         textViewCredits = (TextView) findViewById(R.id.textViewCredits);
         textViewCredits.setText(getString(R.string.txtCreditsMessage)); // Gets the string from strings.xml
+        textViewCredits.startAnimation(animation);
 
 
 

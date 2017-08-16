@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Credits"/>
+        <activity android:name=".Credits"/> <!-- Added the new class entry here -->
     </application>
 
 </manifest>
