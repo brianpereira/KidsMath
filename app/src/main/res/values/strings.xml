@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">KidsMath</string>
+    <string name="txtMessage">Welcome to KidsMath</string>
+    <string name="txtCredits">Acknowledgements: Written by Brian Pereira.Designed by Odelia Pereira. Designed using Android Studio.</string>
 </resources>
