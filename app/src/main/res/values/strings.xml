@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">KidsMath</string>
+    <string name="txtMessage">Welcome to KidsMath</string>
+    <string name="txtCreditsMessage">Acknowledgements: \n\nWritten by Brian Pereira.\nDesigned by Odelia Pereira. \nDesigned using Android Studio.</string>
+    <string name="txtLevel1">Level 1</string>
+    <string name="txtLevel2">Level 2</string>
+    <string name="txtLevel3">Level 3</string>
+    <string name="txtCredits">Credits</string>
+    <string name="txtResult">Result</string>
+    <string name="txtStart">Start</string>
+    <string name="txtStop">Stop</string>
+    <string name="txtNumber1">Number 1</string>
+    <string name="txtNumber2">Number 2</string>
+    <string name="lblLevel1">Tables 1 to 12</string>
+    <string name="lblTimes">x</string>
+    <string name="lblEquals">=</string>
+    <string name="txtZero">0</string>
+    <string name="txtQ">\?</string>
 </resources>

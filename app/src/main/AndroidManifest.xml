@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Credits"/> <!-- Added the new class entry here -->
+        <activity android:name=".Level_1_Activity"/> <!-- Added the new class entry here -->
+        <activity android:name=".Level_2_Activity"/> <!-- Added the new class entry here -->
+        <activity android:name=".Level_3_Activity"/> <!-- Added the new class entry here -->
     </application>
 
 </manifest>

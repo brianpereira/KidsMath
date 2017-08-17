@@ -1,15 +1,10 @@
 package org.dyndns.brianpereira.brian.kidsmath;
 
-import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.animation.Interpolator;
 import android.widget.Button;
-import android.widget.Chronometer;
-import android.widget.TextView;
-
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,54 +13,54 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Code for the start button
-        Button buttonStart = (Button) findViewById(R.id.buttonStart);
+        // Code for the Level 1 button
+        Button btnLevel1 = (Button) findViewById(R.id.btnLevel1);
         // Add a listener
-        buttonStart.setOnClickListener(new View.OnClickListener() {
+        btnLevel1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Generate random numbers
-                Random random = new Random();
-                int n1 = random.nextInt(10) + 1;  //  Max=10, Min=1
-                int n2 = random.nextInt(10) + 1;  //  Max=10, Min=1
-
-                // Assign the random numbers
-                TextView textNumber1 = (TextView) findViewById(R.id.textNumber1);
-                TextView textNumber2 = (TextView) findViewById(R.id.textNumber2);
-                String strn1 = Integer.toString(n1);
-                String strn2 = Integer.toString(n2);
-                textNumber1.setText(strn1);
-                textNumber2.setText(strn2);
-
-                // Reset the result
-                TextView textResult = (TextView) findViewById(R.id.textResult);
-                textResult.setText("Result");
-
-                // Start the chronometer
-                Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
-                chronometer.setBase(SystemClock.elapsedRealtime());
-                chronometer.start();
+               startActivity(new Intent(getApplicationContext(), Level_1_Activity.class));
             }
         });
 
-        // Code for the stop button
-        Button buttonStop = (Button) findViewById(R.id.buttonStop);
+        // Code for the Level 2 button
+        Button btnLevel2 = (Button) findViewById(R.id.btnLevel2);
         // Add a listener
-        buttonStop.setOnClickListener(new View.OnClickListener() {
+        btnLevel2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Stop the chronometer
-                Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
-                chronometer.stop();
+                startActivity(new Intent(getApplicationContext(), Level_2_Activity.class));
+            }
+        });
 
-                // Calculate the result
-                TextView textNumber1 = (TextView) findViewById(R.id.textNumber1);
-                TextView textNumber2 = (TextView) findViewById(R.id.textNumber2);
-                TextView textResult = (TextView) findViewById(R.id.textResult);
-                int n1 = Integer.parseInt(textNumber1.getText().toString());
-                int n2 = Integer.parseInt(textNumber2.getText().toString());
+        // Code for the Level 3 button
+        Button btnLevel3 = (Button) findViewById(R.id.btnLevel3);
+        // Add a listener
+        btnLevel3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Level_3_Activity.class));
+            }
+        });
 
-                textResult.setText(n1 * n2 + "");
+        // Code for the Credits button
+        Button btnCredits = (Button) findViewById(R.id.bnCredits);
+        // Add a listener
+        btnCredits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Credits.class));
+            }
+        });
+
+        // Code for the Exit button
+        Button btnExit = (Button) findViewById(R.id.btnExit);
+        // Add a listener
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+
             }
         });
     }
