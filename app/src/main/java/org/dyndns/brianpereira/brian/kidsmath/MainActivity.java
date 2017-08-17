@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         btnLevel1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // startActivity(new Intent(getApplicationContext(), Credits.class));
+               startActivity(new Intent(getApplicationContext(), Level_1_Activity.class));
             }
         });
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnLevel2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getApplicationContext(), Level_2_Activity.class));
             }
         });
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btnLevel3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getApplicationContext(), Level_3_Activity.class));
             }
         });
 
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
 
             }
         });

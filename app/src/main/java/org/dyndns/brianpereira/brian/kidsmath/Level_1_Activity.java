@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -15,7 +16,8 @@ public class Level_1_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_level_1);
+
 
         // Code for the start button
         Button buttonStart = (Button) findViewById(R.id.buttonStart);
@@ -38,18 +40,35 @@ public class Level_1_Activity extends AppCompatActivity {
 
                 // Reset the result
                 TextView textResult = (TextView) findViewById(R.id.textResult);
-                textResult.setText("Result");
+                textResult.setText(getString(R.string.txtQ));
+
+                // Initialize the Progress Bar
+                final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
                 // Start the chronometer
                 Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
                 chronometer.setBase(SystemClock.elapsedRealtime());
+
+                // Add a listener
+                chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+                    @Override
+                    public void onChronometerTick(Chronometer chronometer) {
+                        int sec = (int) (((SystemClock.elapsedRealtime() - chronometer.getBase()) / 1000 ) % 10);
+
+                        for(int i=0;i<=sec;i++)
+                            progressBar.setProgress(i+1);
+                    }
+                });
                 chronometer.start();
             }
         });
 
+
+
         // Code for the stop button
         Button buttonStop = (Button) findViewById(R.id.buttonStop);
         // Add a listener
+
         buttonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

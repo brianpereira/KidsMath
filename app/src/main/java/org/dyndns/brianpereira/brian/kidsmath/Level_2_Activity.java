@@ -15,7 +15,7 @@ public class Level_2_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_level_2);
 
         // Code for the start button
         Button buttonStart = (Button) findViewById(R.id.buttonStart);

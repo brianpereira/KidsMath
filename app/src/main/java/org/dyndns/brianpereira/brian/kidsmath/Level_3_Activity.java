@@ -15,7 +15,7 @@ public class Level_3_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_level_3);
 
         // Code for the start button
         Button buttonStart = (Button) findViewById(R.id.buttonStart);
